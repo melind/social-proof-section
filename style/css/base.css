@@ -1,0 +1,63 @@
+/*@mixin fontface ($name, $path, $weight: null, $style) {
+    $src: url(quote($path));
+    @font-face {
+		font-family: quote($name);
+        font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+@include fontface("Spartan", "https://fonts.google.com/specimen/Spartan", 400, normal);
+@include fontface("Spartan", "https://fonts.google.com/specimen/Spartan", 500, normal);
+@include fontface("Spartan", "https://fonts.google.com/specimen/Spartan", 700, normal); 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  flex-direction: column;
+  margin: 0;
+}
+
+.container {
+  border-color: yellow;
+}
+
+.screenDisplay {
+  display: flex;
+}
+
+@media screen and (min-width: 1100px) {
+  body {
+    background-image: url("../../images/bg-pattern-bottom-desktop.svg");
+    background-position: top 110px right 1px;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 1100px) {
+  body {
+    background-image: url("../../images/bg-pattern-bottom-desktop.svg");
+    background-position: 90% 220%;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 425px) {
+  .screenDisplay {
+    flex-direction: column;
+  }
+
+  body {
+    background-image: url("../../images/bg-pattern-bottom-mobile.svg");
+    background-position-y: 698px;
+    background-position-x: -541px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+/*# sourceMappingURL=base.css.map */

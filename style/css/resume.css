@@ -1,0 +1,111 @@
+/*@mixin fontface ($name, $path, $weight: null, $style) {
+    $src: url(quote($path));
+    @font-face {
+		font-family: quote($name);
+        font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+@include fontface("Spartan", "https://fonts.google.com/specimen/Spartan", 400, normal);
+@include fontface("Spartan", "https://fonts.google.com/specimen/Spartan", 500, normal);
+@include fontface("Spartan", "https://fonts.google.com/specimen/Spartan", 700, normal); 
+*/
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+.resume {
+  flex: auto;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  flex-direction: column;
+  margin: 0;
+}
+
+.container {
+  border-color: yellow;
+}
+
+.screenDisplay {
+  display: flex;
+}
+
+@media screen and (min-width: 1100px) {
+  body {
+    background-image: url("../../images/bg-pattern-bottom-desktop.svg");
+    background-position: top 110px right 1px;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 1100px) {
+  body {
+    background-image: url("../../images/bg-pattern-bottom-desktop.svg");
+    background-position: 90% 220%;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (max-width: 425px) {
+  .screenDisplay {
+    flex-direction: column;
+  }
+
+  body {
+    background-image: url("../../images/bg-pattern-bottom-mobile.svg");
+    background-position-y: 698px;
+    background-position-x: -541px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.resume {
+  border-color: blue;
+  width: 100%;
+  color: #937b92;
+  padding-top: 9%;
+  margin-left: 5%;
+}
+
+@media screen and (min-width: 376px) {
+  .resume {
+    padding: 8% 5% 0 5%;
+    background-image: url("../../images/bg-pattern-top-desktop.svg");
+    background-repeat: no-repeat;
+  }
+  .resume div:nth-child(2n) {
+    padding-top: 4%;
+    padding-right: 5%;
+  }
+  .resume div:first-child {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .resume {
+    text-align: center;
+    padding: 17% 2% 0;
+    background-image: url("../../images/bg-pattern-top-mobile.svg");
+    background-repeat: no-repeat;
+  }
+  .resume div:first-child {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .resume {
+    padding: 19% 5% 2% 5%;
+  }
+}
+.resume div:first-child {
+  color: #502050;
+  font-weight: bold;
+  padding-bottom: 9%;
+}
+
+/*# sourceMappingURL=resume.css.map */

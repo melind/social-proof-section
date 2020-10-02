@@ -1,0 +1,53 @@
+@import 'base';
+
+.resume {
+    //@extend %borderline;
+    border-color: blue;
+    width: 100%;
+    @extend %flex;
+    color: $Dark-Grayish-Magenta;
+    padding-top: 9%;
+    margin-left: 5%;
+   
+}
+@include m {
+    .resume {
+	padding: 8% 5% 0 5%;
+
+    div:nth-child(2n){
+        padding-top: 4%;
+    padding-right: 5%;
+        }
+    div:first-child {
+     font-size: 60px;
+        }
+    background-image: url('../../images/bg-pattern-top-desktop.svg');
+	background-repeat: no-repeat;
+    
+      }
+	}
+
+
+
+	@include m-max {
+    .resume {
+    text-align: center;
+	padding: 17% 2% 0;
+    background-image: url('../../images/bg-pattern-top-mobile.svg');
+	background-repeat: no-repeat;
+     
+    div:first-child {
+     font-size: 40px;
+        }
+      }
+	}
+@include sm {
+    .resume {
+    padding: 19% 5% 2% 5%;
+    }
+}
+.resume div:first-child {
+    color: $Very-Dark-Magenta;
+    font-weight:  bold;
+    padding-bottom: 9%;
+}
